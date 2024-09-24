@@ -2,53 +2,73 @@
   "categories": [
     {
       "id": "1",
-      "categoryLabel": "Angular",
-      "description" : "Lorem Ipsum"
+      "categoryLabel": "Ancient Civilizations",
+      "description": "Explore the earliest human societies and their contributions"
     },
     {
       "id": "2",
-      "categoryLabel": "JavaScript"
+      "categoryLabel": "Medieval Europe",
+      "description": "Explore the history of Europe from the 5th to the 15th century, including feudalism, the Crusades, and the Renaissance"
     },
     {
       "id": "3",
-      "categoryLabel": "HTML & CSS"
+      "categoryLabel": "World Wars",
+      "description": "Learn about the major global conflicts of the 20th century, focusing on World War I (1914-1918) and World War II (1939-1945)"
     }
   ],
   "questions": [
     {
       "id": "1",
-      "questionLabel": "What is a component in Angular?",
+      "questionLabel": "Which ancient civilization built the Great Pyramid of Giza?",
       "categoryId": "1"
     },
     {
       "id": "2",
-      "questionLabel": "Explain the purpose of the NgModule in Angular.",
-      "categoryId": "1"
+      "questionLabel": "Who was the first Holy Roman Emperor?",
+      "categoryId": "2"
     },
     {
       "id": "3",
-      "questionLabel": "What is a closure in JavaScript?",
-      "categoryId": "2"
+      "questionLabel": "In which year did World War II end?",
+      "categoryId": "3"
     }
   ],
   "answers": [
     {
       "questionId": "1",
-      "answerLabel": "A reusable building block for the user interface",
+      "answerLabel": "Ancient Egyptians",
       "isCorrect": true,
       "id": "7f57"
     },
     {
+      "questionId": "1",
+      "answerLabel": "Ancient Greeks",
+      "isCorrect": false,
+      "id": "7f58"
+    },
+    {
       "questionId": "2",
-      "answerLabel": "NgModule is used to declare and configure modules in Angular applications.",
+      "answerLabel": "Charlemagne",
       "isCorrect": true,
-      "id": "6e79"
+      "id": "7f59"
+    },
+    {
+      "questionId": "2",
+      "answerLabel": "Julius Caesar",
+      "isCorrect": false,
+      "id": "7f5a"
     },
     {
       "questionId": "3",
-      "answerLabel": "A closure is a function that remembers its outer variables and can access them.",
+      "answerLabel": "1945",
       "isCorrect": true,
-      "id": "8d43"
+      "id": "7f5b"
+    },
+    {
+      "questionId": "3",
+      "answerLabel": "1939",
+      "isCorrect": false,
+      "id": "7f5c"
     }
   ],
   "users": [

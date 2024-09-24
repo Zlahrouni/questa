@@ -7,8 +7,8 @@
     <input type="text" id="name" name="name" placeholder="Entrez un pseudo" [(ngModel)]="playerName" required>
   </form>
 
-
-  <app-allquiz></app-allquiz>
+  <app-search-bar (searchResult)="updateSearchResult($event)"/>
+  <app-allquiz [playerName]="playerName" [filter]="searchResultValue"/>
 
 
 

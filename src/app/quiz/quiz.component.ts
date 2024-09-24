@@ -10,6 +10,7 @@ import { QuizService } from "../shared/services/quiz.service";
 export class QuizComponent implements OnInit {
   isQuizFinished = this.quizService.isQuizFinished;
   playerName = '';
+  categoryId = '';
 
   constructor(
     private quizService: QuizService,
@@ -21,7 +22,13 @@ export class QuizComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.quizService.playerName = params['playerName'];
       this.playerName = params['playerName'];
+      this.categoryId = params['categoryId'];
     });
+
+    this.quizService.getQuestionByCategoryId(this.categoryId);
+
+
+
   }
 
   goToResultPage() {

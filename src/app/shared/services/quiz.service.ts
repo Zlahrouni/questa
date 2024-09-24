@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+import {Question} from "../interface/question";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -57,5 +59,21 @@ export class QuizService {
     this.playerAnswers = [];
     this.score = 0;
     this.isQuizFinished = false;
+  }
+
+  getQuestionByCategoryId(categoryId: string) {
+    return this.http.get<any>(`http://localhost:3000/questions?categoryId=${categoryId}`).subscribe((questions) => {
+      console.log('questions', questions)
+      for (const question of questions) {
+        this.http.get(`http://localhost:3000/answers?questionId=${question.id}`).subscribe((answers: any) => {
+          console.log(answers);
+          this.quizContent.push({
+            id: question.id,
+            question: question.questionLabel,
+            answers
+          });
+        });
+      }
+    });
   }
 }

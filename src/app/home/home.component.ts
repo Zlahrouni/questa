@@ -9,6 +9,7 @@ import { AuthService } from "../auth/auth.service";
 })
 export class HomeComponent implements OnInit {
   playerName = '';
+  searchResultValue: string = '';
 
   constructor(private router: Router, private authService: AuthService) { }
 
@@ -27,6 +28,6 @@ export class HomeComponent implements OnInit {
   }
 
   updateSearchResult(value: string) {
-    console.log('updateSearchValue', value);
+    this.searchResultValue = value;
   }
 }

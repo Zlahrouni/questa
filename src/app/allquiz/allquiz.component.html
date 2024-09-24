@@ -1,13 +1,7 @@
-<div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-    
-    <div 
-      *ngFor="let content of allCatQuizz"
-      (click)="navigateToQuiz(content?.id)" 
-      class="card bg-white shadow-md rounded px-4 py-2 cursor-pointer hover:shadow-lg transition duration-200 ease-in-out"
-
-    >
-      <h2 class="text-xl font-bold">{{ content?.categoryLabel }}</h2>
-      <p>{{ content?.description }}</p>
-    </div>
+<div class="cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10" >
+  <div *ngFor="let content of this.allQuizFiltered"
+       (click)="navigateToQuiz(content?.id)" class="card bg-white shadow-md rounded px-4 py-2 cursor-pointer hover:shadow-lg transition duration-200 ease-in-out" >
+    <h2 class="text-xl font-bold">{{ content?.categoryLabel }}</h2>
+    <p>{{ content?.description }}</p>
   </div>
+</div>
