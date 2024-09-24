@@ -2,3 +2,9 @@
   transform: scale(1.1, 1.1);
   background-color: lightblue;
 }
+
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
