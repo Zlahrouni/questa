@@ -9,6 +9,7 @@ import { AuthService } from "../auth/auth.service";
 })
 export class HomeComponent implements OnInit {
   playerName = '';
+  searchResultValue: string = '';
 
   constructor(private router: Router, private authService: AuthService) { }
 
@@ -24,5 +25,9 @@ export class HomeComponent implements OnInit {
 
   navigateToQuiz() {
     this.router.navigate(['/quiz', this.playerName]);
+  }
+
+  updateSearchResult(value: string) {
+    this.searchResultValue = value;
   }
 }
