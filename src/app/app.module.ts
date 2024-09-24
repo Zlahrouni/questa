@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { AllquizComponent } from './allquiz/allquiz.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     QuestionComponent,
     AnswerComponent,
     LoginComponent,
+    RegisterComponent,
+    AllquizComponent,
     RegisterComponent,
     SearchBarComponent
   ],
