@@ -23,3 +23,15 @@
     @apply my-8
   }
 }
+
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.cards .card:hover {
+  transform: scale(1.1, 1.1);
+  background-color: lightblue;
+}
+
